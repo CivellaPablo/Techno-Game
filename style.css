@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e;
+    background-image:
+        linear-gradient(rgba(10, 10, 30, 0.92), rgba(10, 10, 30, 0.92)),
+        url('https://plus.unsplash.com/premium_photo-1687854992749-e15cba89631d?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    line-height: 1.6;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    background-color: #16213e;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e94560;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #e94560;
+    font-size: 1.5rem;
+}
+
+nav a {
+    margin: 0 12px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #e94560;
+}
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #16213e;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e94560;
+}
+
+.mobile-nav a {
+    padding: 10px 0;
+    border-bottom: 1px solid #0f3460;
+    font-weight: bold;
+}
+
+.mobile-nav a:hover {
+    color: #e94560;
+}
+
+#hero {
+    height: 500px;
+    background-color: #0f3460;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url('https://plus.unsplash.com/premium_photo-1687854992749-e15cba89631d?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background-color: #e94560;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+    background-color: #c73652;
+    transform: scale(1.03);
+}
+
+.small-btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+#about {
+    padding: 60px 30px;
+    text-align: center;
+    background-color: #1a1a2e;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-size: 2rem;
+    color: #e94560;
+    margin-bottom: 15px;
+}
+
+#about p {
+    font-size: 1.05rem;
+    color: #ccc;
+}
+
+#gallery {
+    padding: 60px 30px;
+    background-color: #16213e;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 2rem;
+    color: #e94560;
+    margin-bottom: 30px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.game-card {
+    background-color: #0f3460;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+.card-img.action   { background-image: url(https://cdn-icons-png.freepik.com/512/9601/9601282.png); background-position: center; background-size: 170px 150px;}
+.card-img.rpg      { background-image: url(https://st4.depositphotos.com/5777490/24632/v/450/depositphotos_246327472-stock-illustration-quest-room-neon-sign-bright.jpg); background-position: center; background-size: 200px 200px;}
+.card-img.strategy { background-image: url(https://t3.ftcdn.net/jpg/17/91/54/66/360_F_1791546613_ly1ShalPgpWge816sexWEow43YOkeLCw.jpg); background-position: center; background-size: 200px 200px; }
+.card-img.racing   { background-image: url(https://www.freelogovectors.net/wp-content/uploads/2021/07/turbo-logo-freelogovectors.net_.png); background-position: center; background-size: 200px 150px; }
+
+.game-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.game-card p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+#features {
+    padding: 60px 30px;
+    background-color: #1a1a2e;
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 2rem;
+    color: #e94560;
+    margin-bottom: 30px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    background-color: #16213e;
+    padding: 25px 20px;
+    border-radius: 10px;
+    border: 1px solid #0f3460;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.feature-item h3 {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #e94560;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+#specs {
+    padding: 60px 30px;
+    background-color: #16213e;
+    text-align: center;
+}
+
+#specs h2 {
+    font-size: 2rem;
+    color: #e94560;
+    margin-bottom: 25px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #0f3460;
+    font-size: 0.95rem;
+}
+
+th {
+    background-color: #e94560;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+td {
+    border: 1px solid #1a1a2e;
+    padding: 10px 15px;
+    text-align: left;
+    color: #ddd;
+}
+
+tr:nth-child(even) td {
+    background-color: #112255;
+}
+
+
+#contact {
+    padding: 60px 30px;
+    text-align: center;
+    background-color: #1a1a2e;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #e94560;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 320px;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid #0f3460;
+    background-color: #16213e;
+    color: white;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #e94560;
+}
+
+.success-msg {
+    display: none;
+    background-color: #1d7874;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #000;
+    padding: 25px 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #aaa;
+    line-height: 2;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-box {
+    background-color: #16213e;
+    border: 2px solid #e94560;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.popup-box h3 {
+    font-size: 1.5rem;
+    color: #e94560;
+    margin-bottom: 10px;
+}
+
+.popup-box p {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #e94560;
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    table {
+        width: 100%;
+        font-size: 0.85rem;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 90%;
+    }
+
+}

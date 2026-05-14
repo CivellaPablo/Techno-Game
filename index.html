@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techno Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo">Techno Game</h2>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Games</a>
+            <a href="#features">Features</a>
+            <a href="#specs">Specs</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-btn" id="menuBtn">&#9776;</button>
+    </header>
+
+  
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#hero" onclick="closeMobileNav()">Home</a>
+        <a href="#about" onclick="closeMobileNav()">About</a>
+        <a href="#gallery" onclick="closeMobileNav()">Games</a>
+        <a href="#features" onclick="closeMobileNav()">Features</a>
+        <a href="#specs" onclick="closeMobileNav()">Specs</a>
+        <a href="#contact" onclick="closeMobileNav()">Contact</a>
+    </div>
+
+
+    <section id="hero">
+        <h1>Welcome to the Arena</h1>
+        <p>Level up your gaming experience.</p>
+        <a href="#gallery" class="btn">Browse Games</a>
+    </section>
+
+
+    <section id="about">
+        <h2>About This Project</h2>
+        <p>Welcome to Techno Game — your go-to hub for the best online gaming experience. We offer exciting titles, a passionate community, and regular updates to keep things fresh. Whether you are a casual player or a hardcore gamer, there is something here for you.</p>
+    </section>
+
+
+    <section id="gallery">
+        <h2>Popular Games</h2>
+        <div class="grid-container">
+
+            <div class="game-card">
+                <div class="card-img action"></div>
+                <h3>Cyber Combat</h3>
+                <p>Fast-paced action shooter set in a neon dystopia.</p>
+                <button class="btn small-btn" onclick="showGameInfo('Cyber Combat')">Learn More</button>
+            </div>
+
+            <div class="game-card">
+                <div class="card-img rpg"></div>
+                <h3>Neon Quest</h3>
+                <p>Explore a massive open world filled with mysteries.</p>
+                <button class="btn small-btn" onclick="showGameInfo('Neon Quest')">Learn More</button>
+            </div>
+
+            <div class="game-card">
+                <div class="card-img strategy"></div>
+                <h3>Logic Wars</h3>
+                <p>Outsmart your enemies in this real-time strategy game.</p>
+                <button class="btn small-btn" onclick="showGameInfo('Logic Wars')">Learn More</button>
+            </div>
+
+            <div class="game-card">
+                <div class="card-img racing"></div>
+                <h3>Turbo Dash</h3>
+                <p>Race through futuristic tracks at insane speeds.</p>
+                <button class="btn small-btn" onclick="showGameInfo('Turbo Dash')">Learn More</button>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="features">
+        <h2>Why Choose Us?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <span class="feature-icon">&#9889;</span>
+                <h3>Fast Servers</h3>
+                <p>Low latency and high uptime so you never miss a beat.</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">&#128101;</span>
+                <h3>Active Community</h3>
+                <p>Join thousands of players and make new friends online.</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">&#128197;</span>
+                <h3>Monthly Updates</h3>
+                <p>New content, events, and patches every single month.</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">&#127942;</span>
+                <h3>Tournaments</h3>
+                <p>Compete in weekly tournaments and win amazing prizes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="specs">
+        <h2>Minimum System Requirements</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Minimum Requirement</th>
+                        <th>Recommended</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Operating System</td>
+                        <td>Windows 10 64-bit</td>
+                        <td>Windows 11 64-bit</td>
+                    </tr>
+                    <tr>
+                        <td>Processor</td>
+                        <td>Intel i5 / AMD Ryzen 5</td>
+                        <td>Intel i7 / AMD Ryzen 7</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>8 GB</td>
+                        <td>16 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Graphics Card</td>
+                        <td>GTX 1060 / RX 580</td>
+                        <td>RTX 3070 / RX 6800</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>50 GB HDD</td>
+                        <td>100 GB SSD</td>
+                    </tr>
+                    <tr>
+                        <td>Internet</td>
+                        <td>10 Mbps</td>
+                        <td>50 Mbps</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <h2>Join Our Community</h2>
+        <p>Subscribe and be the first to know about new games and updates!</p>
+
+        <div id="successMessage" class="success-msg">
+            &#10003; You have subscribed successfully! Welcome to the community.
+        </div>
+
+        <form id="contactForm">
+            <input type="text" id="nameInput" placeholder="Full Name" required>
+            <input type="email" id="emailInput" placeholder="Email Address" required>
+            <button type="submit" class="btn">Subscribe Now</button>
+        </form>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 Techno Game. All rights reserved.</p>
+        <p>Prepared by: Andrei Guiruela, Arvin Bernandino, Datz Doma, Luke Pongco</p>
+        <p>Section: BSIT 1Y2-3</p>
+    </footer>
+
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-box">
+            <button class="close-btn" onclick="closePopup()">&#10005;</button>
+            <h3 id="popupTitle">Game Title</h3>
+            <p id="popupDesc">Game description goes here.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
